@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "614954294336",
+    "firebase_url": "https://tea-delivery-99890-default-rtdb.firebaseio.com",
+    "project_id": "tea-delivery-99890",
+    "storage_bucket": "tea-delivery-99890.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614954294336:android:f52d3058df3855cfe353a5",
+        "android_client_info": {
+          "package_name": "com.rishabh.teadelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614954294336-a74a2nmk7uihqlf7qbq9upbakfvqus5a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rishabh.teadelivery",
+            "certificate_hash": "7fdc9f79c086fc571d22e9ddc46171e237d0a139"
+          }
+        },
+        {
+          "client_id": "614954294336-ja3b11dck2pf58j356vh556mckkeiguc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy3rQvk3CuK7NPbwqvl6Woh8J9jLauiRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614954294336-ja3b11dck2pf58j356vh556mckkeiguc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

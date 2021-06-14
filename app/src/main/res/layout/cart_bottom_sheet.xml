@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="8dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="100dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/upDownAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            app:lottie_loop="true"
+            android:rotation="180"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center_horizontal"
+            app:lottie_rawRes="@raw/arrow_up_down"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_card_design">
+            <TextView
+
+                android:id="@+id/textOpenCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:letterSpacing="0.1"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="OPEN CART"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp">
+
+
+
+        <LinearLayout
+            android:id="@+id/recyclerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomRelativeLayout"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="CHECKOUT ITEM(S)"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/textItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_bold"/>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_cart"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Empty Cart"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/roboto_black"
+                    android:gravity="center_horizontal"
+                    android:textSize="24dp"/>
+            </LinearLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartLV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/bottomRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textOrderInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Info"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"/>
+
+            <RelativeLayout
+                android:id="@+id/firstLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textOrderInfo"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textSubtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subtotal"
+                    android:fontFamily="@font/roboto_bold"/>
+
+                <TextView
+                    android:id="@+id/textSubtotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Rs"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_bold"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/secondLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/firstLayout">
+
+                <TextView
+                    android:id="@+id/textShippingCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipping Cost"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Rs"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_bold"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/thirdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondLayout">
+
+                <TextView
+                    android:id="@+id/textTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/textTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Rs"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_bold"/>
+
+            </RelativeLayout>
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkoutBtn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="PROCEED PAYMENT"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Tea Delivery</string>
+
+    <string name="our_mission_title">Our Mission</string>
+    <string name="our_mission_desc">It is a Non profitable company which help poor  people and farmers.Our aim to solve problems faced  during farming.</string>
+
+    <!--second screen-->
+    <string name="harvesting_crop_title">Harvesting Crops</string>
+    <string name="harvesting_crop_desc">If you or your family have a piece of Land Then you are at right place. Find your nearby running Combine machine </string>
+
+    <!--third screen-->
+    <string name="sell_crop_title">Sell Crop Directely</string>
+    <string name="sell_crop_desc">Our Company launch new service in farming sector. We directly buy crop from farmers field. Do Not Panic! We do everything</string>
+
+    <!--fourth screen-->
+    <string name="search_machine_title">Search Machine</string>
+    <string name="search_machine_desc">Locate machine near you to make your work easier in reliable price. Time to enjoy now...</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="map_id">ef0f09707d0651f4</string>
+
+</resources>

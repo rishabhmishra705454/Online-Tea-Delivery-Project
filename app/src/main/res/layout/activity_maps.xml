@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:mapId="@string/map_id" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            map:lottie_autoPlay="true"
+            map:lottie_loop="true"
+            map:lottie_rawRes="@raw/map_location_pin" />
+
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@id/bottomLayout"
+        map:lottie_autoPlay="true"
+        map:lottie_loop="true"
+        map:lottie_rawRes="@raw/loading_line" />
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/map_background_layout"
+        android:elevation="8dp"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomBtnLayout">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loadingView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                map:lottie_autoPlay="true"
+                android:layout_centerInParent="true"
+                map:lottie_loop="true"
+                map:lottie_rawRes="@raw/loading_animation"/>
+
+
+
+
+            <TextView
+                android:id="@+id/textDeliveryLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:letterSpacing="0.05"
+                android:text="SELECT DELIVERY LOCATION"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/relariveLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textDeliveryLocation"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imageLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    map:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/setlocality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/imageLocation"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Please wait..."
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/change_background"
+                    android:padding="5dp"
+                    android:text=" CHANGE "
+                    android:textColor="@color/colorSecondary" />
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/showAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relariveLayout2"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14sp" />
+
+            <!--
+           <TextView
+               android:id="@+id/showLocation"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="location"
+               android:fontFamily="@font/roboto_bold"
+               android:layout_below="@id/showAddress"
+               android:layout_margin="5dp"/>
+
+                   <TextView
+                       android:id="@+id/showCurrentLocation"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/showLocation"
+                       android:layout_margin="5dp"
+                       android:text="current location"/>
+
+                   <TextView
+                       android:id="@+id/showAddress"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Address"
+                       android:layout_margin="5dp"
+                       android:layout_below="@id/showCurrentLocation"/>
+
+           -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomBtnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirmLocationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:textColor="@color/colorPrimaryText"
+                android:background="@drawable/button_background"
+                android:enabled="false"
+                android:onClick="getlocation"
+                android:text="Confirm Location" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

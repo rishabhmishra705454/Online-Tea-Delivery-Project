@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:layout_marginBottom="20dp"
+    android:padding="2dp"
+    app:cardBackgroundColor="@color/card_bg_color"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/orderBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Moms Cafe" />
+
+            <TextView
+                android:id="@+id/orderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/change_background"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="5dp"
+                android:text="Ordered"
+                android:textColor="@color/colorSecondary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/orderlocationimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_location_on_24" />
+
+            <TextView
+                android:id="@+id/textLocality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/orderlocationimg"
+                android:text="Birauli jham | 0.9 Kms" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/datetimeLayout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/dateImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_date_range_24"/>
+
+            <TextView
+                android:id="@+id/textOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24-05-2021"
+                android:layout_toRightOf="@id/dateImg"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/datetimeDivider"
+                android:layout_toRightOf="@id/textOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="|"/>
+
+            <ImageView
+                android:id="@+id/timeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_timelapse_24"
+                android:layout_toRightOf="@id/datetimeDivider"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"/>
+
+
+            <TextView
+                android:id="@+id/textOrderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:25 AM"
+                android:layout_toRightOf="@id/timeImg"
+                android:layout_centerVertical="true"/>
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/firstDotedView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/datetimeLayout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dotedline" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayoutInfo"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstDotedView"
+            >
+
+
+                <RelativeLayout
+                    android:id="@+id/priceLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/orderChai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black" />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/orderChai"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+
+                        android:padding="2dp"
+                        android:text="Items" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/timeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/orderDeliveryTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/roboto_medium"
+
+                        android:gravity="center"
+
+                        android:text="15 mins"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/orderDeliveryTime"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/roboto_medium"
+
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Delivery Time" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/orderCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+
+                        android:text="60 Rs"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/orderCost"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Cost" />
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/secondDotedView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/linearLayoutInfo"
+            android:background="@drawable/dotedline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondDotedView"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/orderCancil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/orderTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track"
+                android:layout_centerHorizontal="true"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/orderCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="call"
+                android:layout_alignParentEnd="true"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

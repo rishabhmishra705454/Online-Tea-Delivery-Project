@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/card_bg_color"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        android:padding="16dp">
+
+    
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cutting Chai"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"/>
+    <TextView
+        android:id="@+id/textQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 Cup"
+        android:textSize="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/textTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 Rs"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

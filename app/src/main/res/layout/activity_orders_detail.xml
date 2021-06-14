@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OrdersDetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Detail"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/orderStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/change_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorSecondary" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADDRESS"
+                    android:layout_marginBottom="5dp"/>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/locationImgage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_location_on_24"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textOrderLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/locationImgage"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOUSE / FLAT / BLOCK NO"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"/>
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/textHouseNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LANDMARK"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/textLandmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHONE NO"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"/>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/textPhoneNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+        <View
+            android:id="@+id/firstDotedView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/dotedline" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayoutInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+
+            <RelativeLayout
+                android:id="@+id/priceLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/orderChai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderChai"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+
+                    android:padding="2dp"
+                    android:text="Items" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/orderDeliveryTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_medium"
+
+                    android:gravity="center"
+
+                    android:text="15 mins"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderDeliveryTime"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_medium"
+
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="Delivery Time" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/orderCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderCost"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="Cost" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/secondDotedView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dotedline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ordered Items"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/itemRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Status"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+     <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:layout_margin="16dp"
+         app:cardCornerRadius="8dp"
+         app:cardElevation="8dp">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:padding="16dp"
+             android:orientation="vertical">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Track Order"
+                 android:fontFamily="@font/roboto_medium"/>
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginLeft="10dp">
+
+                 <ImageView
+                     android:id="@+id/tick_icon"
+                     android:layout_width="24dp"
+                     android:layout_height="24dp"
+                     android:src="@drawable/tick_icon_png"/>
+
+                 <TextView
+                     android:id="@+id/textOrderStatus"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Ordered"
+                     android:layout_toRightOf="@id/tick_icon"
+                     android:layout_marginLeft="20dp"
+                     android:fontFamily="@font/roboto_bold"
+                     android:textSize="16dp"/>
+
+
+                 <RelativeLayout
+                     android:id="@+id/datetimeLayout1"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/tick_icon"
+                     android:layout_toRightOf="@id/tick_icon"
+                     android:layout_marginLeft="20dp"
+                     android:layout_marginTop="0dp">
+
+                     <ImageView
+                         android:id="@+id/dateImg1"
+                         android:layout_width="18dp"
+                         android:layout_height="18dp"
+                         android:layout_centerVertical="true"
+                         android:src="@drawable/ic_baseline_date_range_24" />
+
+                     <TextView
+                         android:id="@+id/textOrderDate"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="5dp"
+                         android:layout_toRightOf="@id/dateImg1"/>
+
+                     <TextView
+                         android:id="@+id/datetimeDivider1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_toRightOf="@id/textOrderDate"
+                         android:text="|" />
+
+                     <ImageView
+                         android:id="@+id/timeImg1"
+                         android:layout_width="18dp"
+                         android:layout_height="18dp"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginRight="5dp"
+                         android:layout_toRightOf="@id/datetimeDivider1"
+                         android:src="@drawable/ic_baseline_timelapse_24"/>
+
+
+                     <TextView
+                         android:id="@+id/textOrderTime"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_toRightOf="@id/timeImg1"/>
+
+
+                 </RelativeLayout>
+
+                 <View
+                     android:id="@+id/orderViewLine"
+                     android:layout_width="1dp"
+                     android:layout_height="100dp"
+                     android:background="@color/black"
+                     android:layout_below="@id/tick_icon"
+                     android:layout_marginLeft="11dp"/>
+
+
+                 <ImageView
+                     android:id="@+id/tick_icon2"
+                     android:layout_width="24dp"
+                     android:layout_height="24dp"
+                     android:elevation="8dp"
+                     android:layout_marginBottom="20dp"
+                     android:background="@drawable/white_round_background"
+                     android:layout_below="@id/orderViewLine"/>
+
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Delivered"
+                     android:layout_toRightOf="@id/tick_icon2"
+                     android:layout_marginLeft="20dp"
+                     android:layout_below="@id/orderViewLine"
+                     android:fontFamily="@font/roboto_bold"
+                     android:textSize="16dp"/>
+
+                 <RelativeLayout
+                     android:id="@+id/datetimeLayout2"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/tick_icon2"
+                     android:layout_toRightOf="@id/tick_icon"
+                     android:layout_marginLeft="20dp"
+                     android:visibility="gone"
+                     android:layout_marginTop="0dp">
+
+                     <ImageView
+                         android:id="@+id/dateImg2"
+                         android:layout_width="18dp"
+                         android:layout_height="18dp"
+                         android:layout_centerVertical="true"
+                         android:src="@drawable/ic_baseline_date_range_24" />
+
+                     <TextView
+                         android:id="@+id/textOrderDate2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="5dp"
+                         android:layout_toRightOf="@id/dateImg2"
+                         android:text="24-05-2021"/>
+
+                     <TextView
+                         android:id="@+id/datetimeDivider2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_toRightOf="@id/textOrderDate2"
+                         android:text="|" />
+
+                     <ImageView
+                         android:id="@+id/timeImg2"
+                         android:layout_width="18dp"
+                         android:layout_height="18dp"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginRight="5dp"
+                         android:layout_toRightOf="@id/datetimeDivider2"
+                         android:src="@drawable/ic_baseline_timelapse_24"/>
+
+
+                     <TextView
+                         android:id="@+id/textOrderTime2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_toRightOf="@id/timeImg2"
+                         android:text="11:25 AM"/>
+
+
+                 </RelativeLayout>
+
+             </RelativeLayout>
+
+         </LinearLayout>
+     </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondDotedView"
+            android:layout_margin="10dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/orderCancil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/orderTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track"
+                android:layout_centerHorizontal="true"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/orderCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="call"
+                android:layout_alignParentEnd="true"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
